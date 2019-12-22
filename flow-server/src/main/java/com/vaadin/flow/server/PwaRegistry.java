@@ -17,7 +17,10 @@ package com.vaadin.flow.server;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletContext;
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,13 +35,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.vaadin.flow.server.frontend.FrontendUtils;
+import org.slf4j.LoggerFactory;
+
 import com.vaadin.flow.server.startup.ApplicationRouteRegistry;
 
 import elemental.json.Json;
 import elemental.json.JsonArray;
 import elemental.json.JsonObject;
-import org.slf4j.LoggerFactory;
 
 /**
  * Registry for PWA data.
